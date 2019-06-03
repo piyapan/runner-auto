@@ -2,9 +2,12 @@
 Gitlab Runner use docker use to automate register for scale runner
 # Manual Build
 ## Requirements
+* URL (Go to the runners section of Gitlab and grab url  )
+* TOKEN (Go to the runners section of Gitlab and grab registration token )
 * go version v11 up
 * docker-ce (option with use container)
 * gitlab-runner (option with use local)
+
 # Build
 ## Clone
 ```
@@ -13,16 +16,13 @@ cd ./runner-auto
 ```
 ## Build 
 ```
-make build-docker
+make build
 
 ```
 ## Build docker image
 ```
-make build
+make build-docker
 ```
-
-# Pre Install
-Go to the runners section of Gitlab and grab the url and registration token 
 # Install
 ## Local
 ```
@@ -52,8 +52,7 @@ Scale runner with docker compose
 docker-compose scale runner=10
 ```
 # Clean
-
-
+Clean file execute
 ```
 make clean
 ```
