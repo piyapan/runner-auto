@@ -4,6 +4,7 @@ GOCLEAN=$(GOCMD) clean
 GOTEST=$(GOCMD) test
 GOGET=$(GOCMD) get
 BINARY_NAME=runner-auto
+IMAGE_NAME=subaruqui/gitlab-runner
 all: build build-docker
 build:
 	CGO_ENABLED=0 GOOS=linux GOARCH=amd64 $(GOBUILD) -o $(BINARY_NAME) -v
@@ -14,4 +15,4 @@ deps:
 	 $(GOGET) github.com/google/uuid
 
 build-docker:
-	docker build -t subarqui/gitlab-runner .
+	docker build -t $(IMAGE_NAME) .
