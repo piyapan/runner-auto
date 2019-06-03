@@ -4,7 +4,7 @@ Gitlab Runner use docker use to automate register for scale runner
 ## Requirements
 * URL (Go to the runners section of Gitlab and grab url  )
 * TOKEN (Go to the runners section of Gitlab and grab registration token )
-* go version v11 up
+* go version 11 up
 * docker-ce (option with use container)
 * gitlab-runner (option with use local)
 
