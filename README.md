@@ -1,8 +1,37 @@
 # Runner auto register
 Gitlab Runner use docker use to automate register for scale runner
-## Pre Install
+# Manual Build
+## Requirements
+* go version v11 up
+* docker-ce (option with use container)
+* gitlab-runner (option with use local)
+# Build
+## Clone
+```
+git clone https://github.com/piyapan/runner-auto.git
+cd ./runner-auto
+```
+## Build 
+```
+make build-docker
+
+```
+## Build docker image
+```
+make build
+```
+
+# Pre Install
 Go to the runners section of Gitlab and grab the url and registration token 
 # Install
+## Local
+```
+make run
+```
+OR
+```
+./runner-auto
+```
 ## Docker 
 ```
 docker pull subaruqui/gitlab-runner:latest
@@ -22,22 +51,10 @@ Scale runner with docker compose
 ```
 docker-compose scale runner=10
 ```
-# Manual Build
-## Requirements
-* go version v11 up
-* docker-ce (option with use container)
-* gitlab-runner (option with use local)
-## Build
-# Clone
+# Clean
+
+
 ```
-git clone https://github.com/piyapan/runner-auto.git
-cd ./runner-auto
+make clean
 ```
-# Build 
-```
-make build-docker
-```
-# Build docker image
-```
-make build
-```
+
